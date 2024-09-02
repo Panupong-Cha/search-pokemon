@@ -5,13 +5,18 @@ import { GET_POKEMON } from "../queries/getPokemon";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 
-const PokemonResult = () => {
+interface PokemonProps {
+  name: string;
+}
+
+const PokemonResult = ({ name }: PokemonProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const name = searchParams.get("name");
+  // const name = searchParams.get("name");
 
   const { data, loading, error } = useQuery(GET_POKEMON, {
     variables: { name },
+    skip: !name,
   });
 
   if (loading)

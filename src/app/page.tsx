@@ -1,5 +1,5 @@
 import SearchInput from "../components/SearchInput";
-import PokemonResult from "../components/PokemonResult";
+import PokemonResultWrapper from "../components/PokemonResultWrapper";
 import React, { Suspense, lazy } from "react";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <div className="bg-gray-100 h-screen">
       <SearchInput />
       <Suspense>
-        <PokemonResult />
+        <PokemonResultWrapper />
       </Suspense>
     </div>
   );
