@@ -1,14 +1,11 @@
 import SearchInput from "../components/SearchInput";
-import PokemonResultWrapper from "../components/PokemonResultWrapper";
-import React, { Suspense, lazy } from "react";
+import PokemonResult from "../components/PokemonResult";
 
 const Home = () => {
   return (
     <div className="bg-gray-100 h-screen">
       <SearchInput />
-      <Suspense>
-        <PokemonResultWrapper />
-      </Suspense>
+      <PokemonResult />
     </div>
   );
 };
