@@ -1,6 +1,8 @@
-import Image from "next/image";
 import SearchInput from "../components/SearchInput";
-import PokemonResult from "../components/PokemonResult";
+// import PokemonResult from "../components/PokemonResult";
+import React, { Suspense, lazy } from "react";
+
+const PokemonResult = lazy(() => import("../components/PokemonResult"));
 
 const Home = () => {
   return (
