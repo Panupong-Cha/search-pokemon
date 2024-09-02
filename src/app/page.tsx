@@ -8,7 +8,9 @@ const Home = () => {
   return (
     <div className="bg-gray-100 h-screen">
       <SearchInput />
-      <PokemonResult />
+      <Suspense fallback={<div>Loading Pokémon Data...</div>}>
+        <PokemonResult />
+      </Suspense>
     </div>
   );
 };
