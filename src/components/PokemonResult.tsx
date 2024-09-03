@@ -16,7 +16,9 @@ const PokemonResult = () => {
 
   if (loading)
     return (
-      <p className="flex items-center justify-center text-black">Loading...</p>
+      <p className="flex items-center justify-center text-black">
+        Loading Pokémon data...
+      </p>
     );
   if (error || !data.pokemon)
     return (
